@@ -1,7 +1,8 @@
-package com.example.nasapicturesapp
+package com.example.nasapicturesapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.nasapicturesapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
