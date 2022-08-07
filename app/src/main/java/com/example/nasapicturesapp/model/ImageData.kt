@@ -1,10 +1,10 @@
 package com.example.nasapicturesapp.model
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class PictureData(
+data class ImageData(
     val copyright: String,
     val date: String,
     val description: String,
@@ -13,9 +13,9 @@ data class PictureData(
     val thumbnailUrl: String
 ) : Parcelable
 
-fun List<PictureResponse>.asPictureData(): List<PictureData> {
+fun List<ImageListResponse>.asImageData(): List<ImageData> {
     return map {
-        PictureData(
+        ImageData(
             copyright = "@${it.copyright}",
             date = it.date,
             description = it.explanation,

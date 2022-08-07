@@ -1,9 +1,9 @@
 package com.example.nasapicturesapp.storage.repository.impl
 
-import com.example.nasapicturesapp.model.PictureResponse
+import com.example.nasapicturesapp.model.ImageListResponse
 
 interface StorageInterface {
 
-    suspend fun getDataFromJson() : ArrayList<PictureResponse>
+    suspend fun getDataFromJson() : ArrayList<ImageListResponse>
 
 }

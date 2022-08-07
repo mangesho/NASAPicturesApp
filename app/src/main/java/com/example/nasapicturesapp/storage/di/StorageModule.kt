@@ -13,9 +13,9 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-@InstallIn(SingletonComponent::class)
 @Module
-object StorageModel {
+@InstallIn(SingletonComponent::class)
+object StorageModule {
 
     @Provides
     @Singleton
@@ -25,7 +25,8 @@ object StorageModel {
 
     @Provides
     @Singleton
-    fun provideStorage(@ApplicationContext context: Context): StorageInterface = StorageImpl(context)
+    fun provideStorage(context: Context): StorageInterface = StorageImpl(context)
+
 
     @Provides
     @Singleton

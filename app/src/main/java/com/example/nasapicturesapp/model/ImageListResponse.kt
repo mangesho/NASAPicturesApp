@@ -2,14 +2,15 @@ package com.example.nasapicturesapp.model
 
 import android.os.Parcelable
 import com.example.nasapicturesapp.utils.Constants.DATE_FORMAT_YYYY_MM_DD
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
+
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
 import org.joda.time.format.DateTimeFormatter
 
 
 @Parcelize
-data class PictureResponse(
+data class ImageListResponse(
     val copyright: String,
     val date: String,
     val explanation: String,
