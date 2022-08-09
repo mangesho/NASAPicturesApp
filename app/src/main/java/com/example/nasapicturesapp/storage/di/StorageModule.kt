@@ -1,6 +1,5 @@
 package com.example.nasapicturesapp.storage.di
 
-import android.app.Application
 import android.content.Context
 import com.example.nasapicturesapp.storage.repository.StorageInteractor
 import com.example.nasapicturesapp.storage.repository.StorageRepo
@@ -19,8 +18,8 @@ object StorageModule {
 
     @Provides
     @Singleton
-    fun provideContext(@ApplicationContext application: Application): Context {
-        return application
+    fun provideContext(@ApplicationContext context: Context): Context {
+        return context
     }
 
     @Provides

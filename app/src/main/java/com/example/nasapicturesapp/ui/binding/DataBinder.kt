@@ -9,9 +9,9 @@ object DataBinder {
 
     @BindingAdapter("loadImage")
     @JvmStatic
-    fun loadImage(view: ImageView, avatarImage: String) {
+    fun loadImage(view: ImageView, image: String) {
         Glide.with(view.context)
-            .load(avatarImage)
+            .load(image)
             .centerCrop()
             .placeholder(R.drawable.ic_launcher_background)
             .into(view)

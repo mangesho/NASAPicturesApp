@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class PictureDataViewModel @Inject constructor(override val isNetworkAvailable: MutableLiveData<Boolean>) : BaseViewModel() {
+class PictureDataViewModel @Inject constructor() : BaseViewModel() {
 
     @Inject
     lateinit var storageInteractor: StorageInteractor
@@ -33,8 +33,8 @@ class PictureDataViewModel @Inject constructor(override val isNetworkAvailable: 
         showLoader.value = true
         viewModelScope.launch(Dispatchers.IO) {
             storageInteractor.getImageList().let {
-                imageList.value = it
-                showLoader.value = false
+                imageList.postValue(it)
+                showLoader.postValue(false)
             }
         }
     }

@@ -5,5 +5,5 @@ import androidx.lifecycle.ViewModel
 
 abstract class BaseViewModel: ViewModel() {
 
-    abstract val isNetworkAvailable: MutableLiveData<Boolean>
+    val isNetworkAvailable: MutableLiveData<Boolean> = MutableLiveData()
 }
