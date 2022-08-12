@@ -14,6 +14,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -68,7 +69,9 @@
                 style="@style/TextAppearance.AppCompat.Headline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/dimen_5"
+                android:paddingStart="@dimen/dimen_5"
+                android:paddingEnd="@dimen/dimen_5"
+                android:paddingTop="@dimen/dimen_5"
                 android:textColor="@color/white"
                 android:text="@{imageData.title}"
                 app:layout_constraintStart_toStartOf="parent"
@@ -80,8 +83,12 @@
                 style="@style/TextAppearance.AppCompat.Body2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/dimen_5"
+                android:paddingStart="@dimen/dimen_5"
+                android:paddingEnd="@dimen/dimen_5"
+                android:paddingBottom="@dimen/dimen_10"
                 android:textColor="@color/white"
+                android:maxLines="2"
+                android:ellipsize="end"
                 android:text="@{imageData.description}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -22,6 +22,8 @@ data class ImageData(
             val formatter = SimpleDateFormat(Constants.DATE_FORMAT_DD_MMM_YY)
             return formatter.format(Date(timeStamp))
         }
+
+    var isCollapsed = true
 }
 
 fun List<ImageListResponse>.asImageData(): List<ImageData> {
