@@ -8,7 +8,12 @@ import com.example.nasapicturesapp.R
 import com.example.nasapicturesapp.databinding.ListItemBinding
 import com.example.nasapicturesapp.model.ImageData
 
-class ImageAdapter : RecyclerView.Adapter<ImageViewHolder>() {
+class ImageAdapter(var onItemClickListener: OnItemClickListener) : RecyclerView.Adapter<ImageViewHolder>() {
+
+    interface OnItemClickListener{
+        fun onClick(position: Int, imageData: ImageData)
+    }
+
     var images: List<ImageData> = emptyList()
         set(value) {
             field = value
@@ -31,6 +36,10 @@ class ImageAdapter : RecyclerView.Adapter<ImageViewHolder>() {
         holder.viewDataBinding.apply {
             images[position].apply {
                 imageData = this
+            }
+
+            root.setOnClickListener {
+                onItemClickListener.onClick(position, images[position])
             }
         }
     }

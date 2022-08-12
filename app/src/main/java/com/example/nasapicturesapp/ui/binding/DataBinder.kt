@@ -13,7 +13,7 @@ object DataBinder {
         Glide.with(view.context)
             .load(image)
             .centerCrop()
-            .placeholder(R.drawable.ic_launcher_background)
+            .placeholder(R.drawable.image_background)
             .into(view)
     }
 }

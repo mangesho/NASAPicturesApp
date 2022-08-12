@@ -7,6 +7,12 @@
         <entry key="..\:/Users/DELL/AndroidStudioProjects/NASAPicturesApp/app/src/main/res/layout/fragment_details.xml" value="0.3463541666666667" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/NASAPicturesApp/app/src/main/res/layout/fragment_picture_list.xml" value="0.3463541666666667" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/NASAPicturesApp/app/src/main/res/layout/list_item.xml" value="0.3453125" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2245" />
+        <entry key="app/src/main/res/drawable/image_background.xml" value="0.2245" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.34340802501302764" />
+        <entry key="app/src/main/res/layout/detail_item.xml" value="0.3421875" />
+        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.33794871794871795" />
+        <entry key="app/src/main/res/layout/fragment_image_list.xml" value="0.34340802501302764" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.16935904116727463" />
       </map>
     </option>

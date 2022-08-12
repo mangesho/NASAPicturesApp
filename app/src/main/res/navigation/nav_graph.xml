@@ -9,6 +9,29 @@
         android:id="@+id/imageListFragment"
         android:name="com.example.nasapicturesapp.ui.fragment.ImageListFragment"
         android:label="fragment_dev_byte"
-        tools:layout="@layout/fragment_image_list" />
+        tools:layout="@layout/fragment_image_list" >
+        <action
+            android:id="@+id/action_imageListFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" >
+            <argument
+                android:name="imageData"
+                app:argType="com.example.nasapicturesapp.model.ImageData" />
+            <argument
+                android:name="position"
+                app:argType="integer"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.nasapicturesapp.ui.fragment.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="imageData"
+            app:argType="com.example.nasapicturesapp.model.ImageData" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>
